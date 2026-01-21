@@ -13,7 +13,7 @@
 			<div class="wrapper box" style="border: solid 1px #d8d8d8; padding: 15px; width: 100%;">
 				<div class="d-flex">
 				<div>
-				{!! getLogo() !!}
+				{!! getLogo('img-130x32') !!}
 			</div>
 		</div>
 				

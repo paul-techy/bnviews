@@ -193,7 +193,9 @@ $(document).ready(function()
     $("#phone").intlTelInput({
         separateDialCode: true,
         nationalMode: true,
-        preferredCountries: ["us"],
+        onlyCountries: ["ke"],
+        initialCountry: "ke",
+        preferredCountries: ["ke"],
         autoPlaceholder: "polite",
         placeholderNumberType: "MOBILE",
         utilsScript: baseURL + '/public/js/intl-tel-input-13.0.0/build/js/utils.js'

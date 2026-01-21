@@ -178,7 +178,7 @@ if (!function_exists('defaultImage')) {
 if (!function_exists('getLogo')) {
     function getLogo($className = 'logo_size')
     {   
-        return '<img src="' . image(settings('logo'), 'logo') . '"class="' . $className . '" alt="' . __('Logo') . '"/>';
+        return '<img src="' . image(settings('logo'), 'logo') . '" class="' . $className . '" alt="' . __('Logo') . '"/>';
             
     }
 }

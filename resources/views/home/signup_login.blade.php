@@ -163,7 +163,7 @@
 								<div class="form-check">
 									<input type="checkbox" class="form-check-input" name="guest_terms_accepted" id="guest_terms_accepted" value="1" {{ old('guest_terms_accepted') ? 'checked' : '' }}>
 									<label class="form-check-label" for="guest_terms_accepted">
-										{{ __('I agree to the Guests Terms and Agreement') }} <span class="text-13 text-danger">*</span>
+										<a href="{{ url('policies') }}" target="_blank" class="font-weight-700" style="text-decoration: none; color: inherit;">{{ __('I agree to the Guests Terms and Agreement') }}</a> <span class="text-13 text-danger">*</span>
 									</label>
 									@if ($errors->has('guest_terms_accepted')) <p class="error-tag">{{ $errors->first('guest_terms_accepted') }}</p> @endif
 								</div>
