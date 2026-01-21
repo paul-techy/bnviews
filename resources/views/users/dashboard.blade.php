@@ -18,6 +18,7 @@
             </div>
 			<div class="container-fluid min-height">
 				<div class="row mt-4">
+					@if (Auth::check() && Auth::user()->user_type == 'agent')
 					<div class="col-md-4">
 						<div class="card card-default p-3 mt-3">
 							<div class="card-body">
@@ -26,6 +27,7 @@
 							</div>
 						</div>
 					</div>
+					@endif
 
 					<div class="col-md-4">
 						<div class="card card-default p-3 mt-3">

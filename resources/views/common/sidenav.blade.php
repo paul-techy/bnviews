@@ -1,8 +1,10 @@
 <ul class="sidenav-list">
 	@if (Route::current()->uri() == 'properties' || Route::current()->uri() == 'booking/{id}' || Route::current()->uri() == 'my-bookings')
+		@if (Auth::check() && Auth::user()->user_type == 'agent')
 		<li>
 			<a href="{{ url('properties') }}" aria-selected="{{ (Route::current()->uri() == 'properties') ? 'true' : 'false' }}" class="sidenav-item">{{ __('Your Listings') }}</a>
 		</li>
+		@endif
 
 		<li>
 			<a href="{{ url('my-bookings') }}" aria-selected="{{ (Route::current()->uri() == 'my-bookings') ? 'true' : 'false' }}" class="sidenav-item">{{ __('Property Bookings') }}</a>

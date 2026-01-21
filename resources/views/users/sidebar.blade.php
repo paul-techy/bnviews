@@ -22,14 +22,16 @@
                             <span class="badge badge-danger rounded-circle mr-2 text-12">{{ $count }}</span>
                         @endif
                     </li>
-                </a>
+				</a>
 
+				@if (Auth::check() && Auth::user()->user_type == 'agent')
 				<a class="text-color font-weight-500 mt-1" href="{{ url('properties') }}">
 					<li class="list-group-item vbg-default-hover pl-25 border-0 text-15 p-4  {{ (request()->is('properties')) ? 'active-sidebar' : '' }}">
 						<i class="far fa-list-alt mr-3 text-18 align-middle"></i>
 						{{ __('Listings') }}
 					</li>
 				</a>
+				@endif
 
 				<a class="text-color font-weight-500 mt-1" href="{{ url('my-bookings') }}">
 					<li class="list-group-item vbg-default-hover pl-25 border-0 text-15 p-4  {{ (request()->is('my-bookings')) ? 'active-sidebar' : '' }}">
