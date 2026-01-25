@@ -835,7 +835,7 @@ class EmailController extends Controller
         $mail->addAddress($data['email'], $data['first_name']);
 
         $mail->Subject = $data['subject'];
-        $image = getLogo('file-img');
+        $image = image(settings('logo'), 'logo');
         $link            = isset($data['link']) ? $data['link'] : '' ;
         $lang            = isset($data['link_text']) ? $data['link_text'] : '';
         $message         = file_get_contents($data['view']);
